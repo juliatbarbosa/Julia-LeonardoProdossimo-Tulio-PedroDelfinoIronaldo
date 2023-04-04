@@ -11,6 +11,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
 header {
     height: 76px;
     background-color: white;
@@ -233,4 +234,47 @@ header ul li a:hover {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.container-section{
+    border-radius:0 0 10px 10px;
+    padding: 40px;
+    margin: auto;
+    display: grid;
+    max-width: 80%;
+    background-color:white;
+}
+
+.container-section h2{
+    
+    margin: 20px;
+    text-align: left;
+}
+
+.container-section h1{
+
+    text-align: center;
+    gap: 40px;
+    font-size: xx-large;
+    margin-bottom: 30px;
+  
+}
+
+.container-section h3{
+    text-align: left;
+}
+
+.container-section p{
+    margin-bottom: 20px;
+    font-size: 14pt;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+#BPG2{
+    justify-content: center;
+    align-items: center;
+    display: grid;
 }
