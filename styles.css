@@ -73,6 +73,7 @@ header ul li a:hover {
 }
 
 .banner-content h1 {
+    color: white;
     font-size: 36px;
     text-transform: uppercase;
     margin-bottom: 24px;
@@ -93,17 +94,18 @@ header ul li a:hover {
 }
 
 .banner-links a {
+    color:black;
+    text-decoration: none;
     padding: 8px 24px;
-    background-color: transparent;
+    background-color: white;
     font-size: 19px;
     border-radius: 8px;
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     cursor: pointer;
 }
 
 .banner-links a:hover{
     border: 2px solid white;
-    color: white;
     transition: all ease 0.2s;
 }
 
