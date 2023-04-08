@@ -422,50 +422,54 @@ Footer - Rodapé
 Página Como Ajudar
 */
 
-.container-section {
-    /*existe para centralizar*/
-    border-radius: 0 0 10px 10px;
-    /*arredondamento da borda*/
-    padding: 40px;
-    /*espaçamento no conteúdo, sendo 10px em todos os lados*/
+
+
+
+
+
+/*
+ Página Notícias e Eventos
+*/
+.container-area {
+    width: 100%;
+    max-width: 1196px;
     margin: 0 auto;
-    /* margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
     display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    background-color: white;
+    padding: 48px 0;
+    gap: 24px;
 }
 
-.container-section h2 {
-
-    margin: 20px;
-    text-align: left;
+.container-area h1 {
+    margin-bottom: 24px;
 }
 
-.container-section h1 {
-
-    text-align: center;
-    gap: 40px;
-    font-size: xx-large;
-    margin-bottom: 30px;
-
+.area-card {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
-.container-section h3 {
-    text-align: left;
+.container-area img {
+    width: 250px;
+    height: 180px;
+    min-width: 250px;
+    border: 2px solid black;
+    border-radius: 6px;
 }
 
-.container-section p {
-    margin-bottom: 20px;
-    font-size: 14pt;
+.text-area h4 {
+    margin-bottom: 8px;
+    font-size: 18px;
 }
 
-input {
-    margin-bottom: 20px;
+.text-area p {
+    font-size: 14px;
 }
 
-#BPG2 {
-    justify-content: center;
-    align-items: center;
-    display: grid;
+.noticias {
+    flex: 1;
+}
+
+.eventos {
+    flex: 1;
 }
