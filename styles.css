@@ -422,10 +422,122 @@ Footer - Rodapé
 Página Como Ajudar
 */
 
+.help {
+    background-color: #5fbbf0;
+    padding: 48px 0;
+}
 
+.container-help {
+    width: 100%;
+    max-width: 1196px;
+    margin: 0 auto;
+}
 
+.container-help h1 {
+    margin-bottom: 24px;
+}
 
+.start {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
 
+.info-bank {
+    margin-top: 16px;
+}
+
+.info-bank p {
+    font-size: 20px;
+}
+
+.form {
+    background-color: white;
+    padding: 48px 0; 
+}
+
+.container-form {
+    width: 100%;
+    max-width: 1196px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form h2 {
+    margin-bottom: 24px;
+}
+
+.container-form p {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.container-form input {
+    width: 300px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-form a {
+    width: 72px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: 4px 12px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.container-form a:hover {
+    border: 2px solid #5fbbf0;
+    color: #5fbbf0;
+    transition: all ease 0.2s;
+}
+
+.doacao {
+    background-color: #5fbbf0;
+    padding: 48px 0; 
+}
+
+.container-doacao {
+    width: 100%;
+    max-width: 1196px;
+    margin: 0 auto;
+}
+
+.container-doacao h2 {
+    margin-bottom: 24px;
+}
+
+.container-doacao p {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.end {
+    background-color: white;
+    padding: 72px 0; 
+}
+
+.container-end {
+    width: 100%;
+    max-width: 1196px;
+    margin: 0 auto;
+}
+
+.container-end p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+} 
 
 /*
  Página Notícias e Eventos
