@@ -384,20 +384,26 @@ Footer - Rodapé
     /*centralizar horizontalmente*/
     list-style: none;
     /* retira os pontinhos da lista*/
+    gap: 16px;
 }
 
-.container-footer a {
+.footer-info a {
     /*estilização do design do link*/
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     color: black;
 }
 
-.container-footer a:hover {
+.footer-info a:hover {
     /*alteração do design no link ao passar o mouse*/
     color: white;
     /*cor da fonte*/
     transition: all ease 0.2s;
+}
+
+.footer-info p {
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .container-footer img {
@@ -418,6 +424,20 @@ Footer - Rodapé
     /*espaçamento entre linhas e colunas*/
 }
 
+.lista-alunos {
+    padding: 12px;
+}
+
+.ano {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.ano p {
+    font-size: 18px;
+    font-weight: bold;
+}
 /* 
 Página Como Ajudar
 */
@@ -624,12 +644,6 @@ Página Parceiros
  */
 
 .parceiros {
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
-}
-
-.parceiros {
     background-color: #5fbbf0;
     padding: 48px 0;
 }
@@ -668,3 +682,67 @@ Página Parceiros
    width: 200px;
     height: 200px;
 }
+
+/* 
+Página Fale Conosco 
+*/
+
+.endereco {
+    background-color: #5fbbf0;
+    padding: 48px 0;
+}
+
+.container-endereco{
+    width: 100%;
+    max-width: 1196px;
+    margin: 0 auto;
+}
+
+.container-endereco h1 {
+    margin-bottom: 48px;
+}
+
+.container-endereco ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-endereco ul li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.container-endereco a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.endereco a:hover {
+    color: white;
+    transition: all ease 0.2s;
+}
+
+.social a:hover {
+    color: #5fbbf0;
+    transition: all ease 0.2s;
+}
+
+.container-endereco h4 {
+    font-size: 20px;
+}
+
+.container-endereco img {
+    width: 48px;
+    height: 48px;
+}
+
+.social {
+    background-color: white;
+    padding: 48px 0;
+}
+
