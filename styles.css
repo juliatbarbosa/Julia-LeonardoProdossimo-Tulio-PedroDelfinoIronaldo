@@ -586,12 +586,52 @@ Página Como Ajudar
     flex: 1;
 }
 
+/* 
+Página Parceiros
+ */
+
 .parceiros {
     width: 100%;
     max-width: 1196px;
     margin: 0 auto;
 }
 
-.parceiros h1 {
-    margin-top: 48px;
+.parceiros {
+    background-color: #5fbbf0;
+    padding: 48px 0;
+}
+
+.container-parceiros{
+    width: 100%;
+    max-width: 1196px;
+    margin: 0 auto;
+}
+
+
+.container-parceiros p {
+    font-size: 20px;
+    margin-top: 24px;
+}
+
+.logos {
+    background-color: white;
+    padding: 48px 0; 
+}
+
+.container-logos {
+    width: 100%;
+    max-width: 1196px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    
+}
+
+.container-logos img {
+   width: 200px;
+    height: 200px;
 }
