@@ -1,403 +1,239 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-* {
-    /* o * serve para uma definição em todo arquivo css*/
-    margin: 0;
-    /* Margin = Margem - Espaçamento fora do conteúdo. */
-    padding: 0;
-    /*Padding = Preenchimento - Espaçamento dentro dos limites do conteúdo. */
-    box-sizing: border-box;
-    /*não soma as bordas e margens com altura e largura de um elemento*/
+* {/* zerando as propriedades que já vem pré-definidas no css*/
+    margin: 0; /* Margin = Margem - Espaçamento fora do conteúdo. */
+    padding: 0; /*Padding = Preenchimento - Espaçamento dentro dos limites do conteúdo. */
+    box-sizing: border-box; /*não soma as bordas e margens com altura e largura de um elemento*/
 }
 
-body {
-    /*corpo = conteúdo*/
-    background-color: #5fbbf0;
-    /* cor de fundo */
-    font-family: 'Roboto', sans-serif;
-    /*fonte para tudo que está no body*/
+body { /*corpo = conteúdo*/
+    background-color: #5fbbf0; /* cor de fundo */
+    font-family: 'Roboto', sans-serif; /*fonte para tudo que está no body*/
 }
 
-/*
-Cabeçalho
-*/
 
-header {
-    /*cabeçalho*/
-    height: 76px;
-    /*altura*/
-    background-color: white;
-    /*cor de fundo*/
+header { /*cabeçalho*/
+    height: 76px; /*altura*/
+    background-color: white; /*cor de fundo*/
 }
 
-.container-header {
-    /*existe para centralizar*/
-    width: 100%;
-    /*largura*/
-    height: 76px;
-    /*altura*/
-    max-width: 1196px;
-    /*largura máxima*/
-    margin: 0 auto;
-    /* margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
+.container-header { /*existe para centralizar*/
+    width: 100%; /*largura*/
+    height: 76px; /*altura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto; /* margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
 }
 
-.content-header {
-    /*existe para centralizar*/
-    height: 100%;
-    /*altura*/
-    display: flex;
-    /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: space-between;
-    /*separar os elementos ao máximo*/
-    align-items: center;
-    /*centralizar verticalmente*/
+.content-header { /*existe para centralizar*/
+    height: 100%; /*altura*/
+    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    justify-content: space-between; /*separar os elementos ao máximo*/
+    align-items: center; /*centralizar verticalmente*/
 }
 
-header ul {
-    /* header ul = alteração da lista no cabeçalho*/
-    list-style: none;
-    /* retira os pontinhos da lista*/
-    display: flex;
-    /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: center;
-    /*centralizar horizontalmente*/
-    gap: 24px;
-    /*espaçamento entre linhas e colunas*/
+header ul { /* header ul = alteração da lista no cabeçalho*/
+    list-style: none; /* retira os pontinhos da lista*/
+    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    justify-content: center; /*centralizar horizontalmente*/
+    gap: 24px; /*espaçamento entre linhas e colunas*/
 }
 
-header ul li a {
-    /* header ul li a =  alteração dos links que estão nas listas do cabeçalho*/
-    text-decoration: none;
-    /*retirar o sublinhado do link*/
-    color: black;
-    /*cor da fonte*/
-    font-size: 18px;
-    /*tamanho da fonte*/
+header ul li a { /* header ul li a =  alteração dos links que estão nas listas do cabeçalho*/
+    text-decoration: none; /*retirar o sublinhado do link*/
+    color: black; /*cor da fonte*/
+    font-size: 18px; /*tamanho da fonte*/
 }
 
-header ul li a:hover {
-    /*header ul li a:hover = hover utiliza-se quando passa o mouse em cima, ou seja, quando passar as alterações abaixo serão feitas*/
-    color: #5fbbf0;
-    /*cor da fonte*/
-    transition: all ease 0.2s;
-    /*tempo de transição ao colocar o mouse em cima*/
+header ul li a:hover { /*header ul li a:hover = hover utiliza-se quando passa o mouse em cima, ou seja, quando passar as alterações abaixo serão feitas*/
+    color: #5fbbf0; /*cor da fonte*/
+    transition: all ease 0.2s; /*tempo de transição ao colocar o mouse em cima*/
+}
+/* ********************* */
+
+.banner { /*banner = começo da página inicial -> */
+    width: 100%; /*largura*/
+    height: calc(100vh - 76px); /*altura calculada = 100vh (100% da altura da janela de navegação) - 76px (altura do header)*/
 }
 
-/*
-Banner
-*/
-
-.banner {
-    /*banner = começo da página inicial -> */
-    width: 100%;
-    /*largura*/
-    height: calc(100vh - 76px);
-    /*altura calculada = 100vh (100% da altura da janela de navegação) - 76px (altura do header)*/
+.container-banner { /*existe para centralizar*/
+    width: 100%; /*largura*/
+    height: 100%; /*altura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto; /* margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
+    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    align-items: center; /*centralizar verticalmente*/
 }
 
-.container-banner {
-    /*existe para centralizar*/
-    width: 100%;
-    /*largura*/
-    height: 100%;
-    /*altura*/
-    max-width: 1196px;
-    /*largura máxima*/
-    margin: 0 auto;
-    /* margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
-    display: flex;
-    /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    align-items: center;
-    /*centralizar verticalmente*/
+.banner-img { /*imagem do banner*/
+    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    justify-content: center; /*centralizar horizontalmente*/
+    margin-right: 100px; /*margem do lado direito*/
 }
 
-.banner-img {
-    /*imagem do banner*/
-    display: flex;
-    /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: center;
-    /*centralizar horizontalmente*/
-    margin-right: 100px;
-    /*margem do lado direito*/
+.banner-img img { /*alteração imagem do banner*/
+    width: 450px; /*largura*/
 }
 
-.banner-img img {
-    /*alteração imagem do banner*/
-    width: 450px;
-    /*largura*/
+.banner-content h1 { /*conteúdo do banner - título*/
+    color: white; /*cor da fonte*/
+    font-size: 36px; /*tamanho da fonte*/
+    text-transform: uppercase; /* transformar em letras maiúsculas*/
+    margin-bottom: 24px; /*margem do lado debaixo*/
+    text-align: right; /*texto do lado direito*/
 }
 
-.banner-content h1 {
-    /*conteúdo do banner - título*/
-    color: white;
-    /*cor da fonte*/
-    font-size: 36px;
-    /*tamanho da fonte*/
-    text-transform: uppercase;
-    /* transformar em letras maiúsculas*/
-    margin-bottom: 24px;
-    /*margem do lado debaixo*/
-    text-align: right;
-    /*texto do lado direito*/
+.banner-content p { /*conteúdo do banner - parárafo*/
+    font-size: 22px; /*tamanho da fonte*/
+    margin-bottom: 32px; /*margem do lado de baixo*/
+    text-align: right; /*texto do lado direito da página*/
 }
 
-.banner-content p {
-    /*conteúdo do banner - parárafo*/
-    font-size: 22px;
-    /*tamanho da fonte*/
-    margin-bottom: 32px;
-    /*margem do lado de baixo*/
-    text-align: right;
-    /*texto do lado direito da página*/
+.banner-links { /*botão do banner que vai para a página de Como Ajudar*/
+    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    justify-content: end; /*posicionado no final da linha*/
+    align-items: center; /*centralizado verticalmente*/
+    gap: 48px; /*espaçamento entre linhas e colunas*/
 }
 
-.banner-links {
-    /*botão do banner que vai para a página de Como Ajudar*/
-    display: flex;
-    /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: end;
-    /*posicionado no final da linha*/
-    align-items: center;
-    /*centralizado verticalmente*/
-    gap: 48px;
-    /*espaçamento entre linhas e colunas*/
+.banner-links a { /*alteração no botão do banner que vai para a página de Como Ajudar*/
+    background-color: transparent; /*cor de fundo do link/botão*/
+    font-size: 19px; /*tamanho da fonte*/
+    font-weight: bold; /*expessura da fonte*/
+    color: white; /*cor da fonte*/
+    text-decoration: none; /*retirar o sublinhado do link*/
+    text-transform: uppercase; /*transformar em letras maiúsculas*/
+    border: 2px solid white; /*borda com expessura de 2px, solid=inteira, cor branca*/
+    border-radius: 8px; /*arredondamento da borda*/
+    padding: 8px 24px; /*espaçamento no conteúdo, sendo 8px em cima e embaixo e 24px nas laterais*/
 }
 
-.banner-links a {
-    /*alteração no botão do banner que vai para a página de Como Ajudar*/
-    background-color: transparent;
-    /*cor de fundo do link/botão*/
-    font-size: 19px;
-    /*tamanho da fonte*/
-    font-weight: bold;
-    /*expessura da fonte*/
-    color: white;
-    /*cor da fonte*/
-    text-decoration: none;
-    /*retirar o sublinhado do link*/
-    text-transform: uppercase;
-    /*transformar em letras maiúsculas*/
-    border: 2px solid white;
-    /*borda com expessura de 2px, solid=inteira, cor branca*/
-    border-radius: 8px;
-    /*arredondamento da borda*/
-    cursor: pointer;
-    /*quando passar em cima do link, o cursor do mouse muda*/
-    padding: 8px 24px;
-    /*espaçamento no conteúdo, sendo 8px em cima e embaixo e 24px nas laterais*/
+.banner-links a:hover { /*hover altera o botão banner ao passar o mouse por cima*/
+    background-color: white; /*cor de fundo do link/botão*/
+    color: #5fbbf0; /*cor da fonte*/
+    border: 2px solid white; /*borda com expessura de 2px, solid=inteira, cor branca*/
+    transition: all ease 0.2s; /*tempo de transição ao colocar o mouse em cima*/
+}
+/* ********************* */
+
+.video { /* parte onde está o vídeo e o resumo*/
+    width: 100%; /*largura*/
+    background-color: white; /*cor de fundo*/
+    padding: 80px 0; /*espaçamento no conteúdo, sendo 80px em cima e embaixo e 0 nas laterais*/
 }
 
-.banner-links a:hover {
-    /*hover altera o botão banner ao passar o mouse por cima*/
-    background-color: white;
-    /*cor de fundo do link/botão*/
-    color: #5fbbf0;
-    /*cor da fonte*/
-    border: 2px solid white;
-    /*borda com expessura de 2px, solid=inteira, cor branca*/
-    transition: all ease 0.2s;
-    /*tempo de transição ao colocar o mouse em cima*/
+.container-video { /*existe para centralizar*/
+    width: 100%; /*largura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto; /*margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
+    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    justify-content: center; /*centralizado horizontalmente*/
+    gap: 48px; /*espaçamento entre as linhas e colunas*/
 }
 
-/*
-Vídeo e Resumo
-*/
-
-.video {
-    /* parte onde está o vídeo e o resumo*/
-    width: 100%;
-    /*largura*/
-    background-color: white;
-    /*cor de fundo*/
-    padding: 80px 0;
-    /*espaçamento no conteúdo, sendo 80px em cima e embaixo e 0 nas laterais*/
+.container-video video {/*alterações no vídeo*/
+    width: 500px; /*largura*/
 }
 
-.container-video {
-    /*existe para centralizar*/
-    width: 100%;
-    /*largura*/
-    max-width: 1196px;
-    /*largura máxima*/
-    margin: 0 auto;
-    /*margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
-    display: flex;
-    /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: center;
-    /*centralizado horizontalmente*/
-    gap: 48px;
-    /*espaçamento entre as linhas e colunas*/
+.resume-video p { /*parágrafo de resumo*/
+    margin-top: 24px; /*margem do lado de cima*/
+    font-size: 18px; /*tamanho da fonte*/
+}
+/* ********************* */
+
+.QuemSomos { /*parte que está tudo do Quem Somos*/
+    padding: 80px 0; /*espaçamento no conteúdo, sendo 80px em cima e embaixo e 0 nas laterais*/
 }
 
-.container-video video {
-    /*alterações no vídeo*/
-    width: 500px;
-    /*largura*/
+.container-QuemSomos { /*existe para centralizar*/
+    width: 100%; /*largura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto; /*margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
 }
 
-.resume-video p {
-    /*parágrafo de resumo*/
-    margin-top: 24px;
-    /*margem do lado de cima*/
-    font-size: 18px;
-    /*tamanho da fonte*/
+.container-QuemSomos p { /*parágrafo de Quem Somos*/
+    font-size: 18px; /*tamanho da fonte*/
+    margin-top: 24px; /*margem do lado de cima*/
+    margin-bottom: 24px; /*margem do lado debaixo*/
 }
 
-/*
-Página Quem Somos e Nossos Pilares
-*/
-
-.QuemSomos {
-    /*parte que está tudo do Quem Somos*/
-    padding: 80px 0;
-    /*espaçamento no conteúdo, sendo 80px em cima e embaixo e 0 nas laterais*/
-}
-
-.container-QuemSomos {
-    /*existe para centralizar*/
-    width: 100%;
-    /*largura*/
-    max-width: 1196px;
-    /*largura máxima*/
-    margin: 0 auto;
-    /*margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
-}
-
-.container-QuemSomos p {
-    /*parágrafo de Quem Somos*/
-    font-size: 18px;
-    /*tamanho da fonte*/
-    margin-top: 24px;
-    /*margem do lado de cima*/
-    margin-bottom: 24px;
-    /*margem do lado debaixo*/
-}
-
-.cards {
-    /* todos os cards de Nossos Pilares*/
+.cards { /* todos os cards de Nossos Pilares*/
     display: flex;
     justify-content: space-between;
     gap: 48px;
     padding: 32px 0;
 }
 
-.card {
-    /*título e imagem de cada card*/
-    display: flex;
-    /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    align-items: center;
-    /*centralizado verticalmente*/
-    padding: 16px 48px;
-    /*espaçamento no conteúdo, sendo 16px em cima e embaixo e 48px nas laterais*/
-    gap: 16px;
-    /*espaçamento entre as linhas e colunas*/
-    border: 2px solid black;
-    /*borda com expessura de 2px, solid=inteira, cor preta*/
-    border-radius: 6px;
-    /*arredondamento da borda*/
+.card { /*título e imagem de cada card*/
+    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    align-items: center; /*centralizado verticalmente*/
+    padding: 16px 48px; /*espaçamento no conteúdo, sendo 16px em cima e embaixo e 48px nas laterais*/
+    gap: 16px; /*espaçamento entre as linhas e colunas*/
+    border: 2px solid black; /*borda com expessura de 2px, solid=inteira, cor preta*/
+    border-radius: 6px; /*arredondamento da borda*/
+}
+/* ********************* */
+
+.projetos { /*parte inteira do Nossos Projetos*/
+    padding: 80px 0; /*espaçamento no conteúdo, sendo 80px em cima e embaixo e 0 nas laterais*/
+    background-color: white; /*cor de fundo*/
 }
 
-/*
-Página Nossos Projetos
-*/
-
-.projetos {
-    /*parte inteira do Nossos Projetos*/
-    padding: 80px 0;
-    /*espaçamento no conteúdo, sendo 80px em cima e embaixo e 0 nas laterais*/
-    background-color: white;
-    /*cor de fundo*/
+.container-projetos { /*existe para centralizar*/
+    width: 100%; /*largura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto; /*margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
 }
 
-.container-projetos {
-    /*existe para centralizar*/
-    width: 100%;
-    /*largura*/
-    max-width: 1196px;
-    /*largura máxima*/
-    margin: 0 auto;
-    /*margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
+.container-projetos h2 { /*título dos projetos*/
+    margin-bottom: 24px; /*margem na parte debaixo do título*/
 }
 
-.container-projetos h2 {
-    /*título dos projetos*/
-    margin-bottom: 24px;
-    /*margem na parte debaixo do título*/
+.projeto-card img { /*imagens que estão nos projetos*/
+    width: 250px; /*largura*/
+    height: 160px; /*altura*/
+    border-radius: 6px; /*arredondamento da borda*/
 }
 
-.projeto-card img {
-    /*imagens que estão nos projetos*/
-    width: 250px;
-    /*largura*/
-    height: 160px;
-    /*altura*/
-    border-radius: 6px;
-    /*arredondamento da borda*/
+.projeto-card {/*possui o título, o parágrafo e as imagens*/
+    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    justify-content: center; /*centralizar horizontalmente*/
+    gap: 16px; /*espaçamento entre linhas e colunas*/
+    margin-bottom: 32px; /*margem do lado debaixo*/
+    padding: 12px 12px 24px 12px; /*espaçamento das laterais do conteúdo, sendo respectivamente cima, direita, baixo, esquerda*/
+    border-bottom: 1px solid #818181; /*borda de 1px na parte debaixo, solid=inteira, cor #818181 cinza*/
 }
 
-.projeto-card {
-    /*possui o título, o parágrafo e as imagens*/
-    display: flex;
-    /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: center;
-    /*centralizar horizontalmente*/
-    gap: 16px;
-    /*espaçamento entre linhas e colunas*/
-    margin-bottom: 32px;
-    /*margem do lado debaixo*/
-    padding: 12px 12px 24px 12px;
-    /*espaçamento das laterais do conteúdo, sendo respectivamente cima, direita, baixo, esquerda*/
-    border-bottom: 1px solid #818181;
-    /*borda de 1px na parte debaixo, solid=inteira, cor #818181 cinza*/
-}
-
-.card-content p {
-    /*parágrafo dos cards*/
-    padding: 8px 0;
-    /*espaçamento no conteúdo, sendo 8px em cima e embaixo e 0 nas laterais*/
+.card-content p { /*parágrafo dos cards*/
+    padding: 8px 0; /*espaçamento no conteúdo, sendo 8px em cima e embaixo e 0 nas laterais*/
 }
 
 /*
 Footer - Rodapé
 */
 
-.container-footer {
-    /*existe para centralizar*/
-    width: 100%;
-    /*largura*/
-    max-width: 1196px;
-    /*largura máxima*/
-    margin: 0 auto;
-    /* margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
-    padding: 24px;
-    /*espaçamento no conteúdo, sendo 24px em todos os lados*/
+.container-footer { /*existe para centralizar*/
+    width: 100%; /*largura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto; /* margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
+    padding: 24px; /*espaçamento no conteúdo, sendo 24px em todos os lados*/
 }
 
-.container-footer ul {
-    /*alterar a direção da lista */
-    display: flex;
-    /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: space-between;
-    /*separar os elementos ao máximo*/
-    align-items: center;
-    /*centralizar horizontalmente*/
-    list-style: none;
-    /* retira os pontinhos da lista*/
+.container-footer ul { /*alterar a direção da lista */
+    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    justify-content: space-between; /*separar os elementos ao máximo*/
+    align-items: center; /*centralizar horizontalmente*/
+    list-style: none; /* retira os pontinhos da lista*/
     gap: 16px;
 }
 
-.footer-info a {
-    /*estilização do design do link*/
+.footer-info a { /*estilização do design do link*/
     text-decoration: none;
     font-size: 14px;
     color: black;
 }
 
-.footer-info a:hover {
-    /*alteração do design no link ao passar o mouse*/
-    color: white;
-    /*cor da fonte*/
+.footer-info a:hover { /*alteração do design no link ao passar o mouse*/
+    color: white; /*cor da fonte*/
     transition: all ease 0.2s;
 }
 
@@ -406,22 +242,15 @@ Footer - Rodapé
     font-size: 14px;
 }
 
-.container-footer img {
-    /*estilização da imagem*/
-    width: 32px;
-    /*largura*/
-    height: 32px;
-    /*altura*/
+.container-footer img { /*estilização da imagem*/
+    width: 32px; /*largura*/
+    height: 32px; /*altura*/
 }
 
-.container-footer ul li {
-    /*centralizar o rodapé*/
-    display: flex;
-    /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    align-items: center;
-    /*centralizado verticalmente*/
-    gap: 8px;
-    /*espaçamento entre linhas e colunas*/
+.container-footer ul li { /*centralizar o rodapé*/
+    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    align-items: center; /*centralizado verticalmente*/
+    gap: 8px; /*espaçamento entre linhas e colunas*/
 }
 
 .lista-alunos {
@@ -438,6 +267,14 @@ Footer - Rodapé
     font-size: 18px;
     font-weight: bold;
 }
+
+
+
+
+
+
+
+
 /* 
 Página Como Ajudar
 */
@@ -559,6 +396,64 @@ Página Como Ajudar
     text-align: center;
 } 
 
+
+
+
+
+
+
+
+/* 
+Página Parceiros
+ */
+
+ .parceiros {
+    background-color: #5fbbf0;
+    padding: 48px 0;
+}
+
+.container-parceiros{
+    width: 100%;
+    max-width: 1196px;
+    margin: 0 auto;
+}
+
+
+.container-parceiros p {
+    font-size: 20px;
+    margin-top: 24px;
+}
+
+.logos {
+    background-color: white;
+    padding: 48px 0; 
+}
+
+.container-logos {
+    width: 100%;
+    max-width: 1196px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    
+}
+
+.container-logos img {
+   width: 200px;
+    height: 200px;
+}
+
+
+
+
+
+
+
+
 /*
  Página Notícias
 */
@@ -600,6 +495,12 @@ Página Como Ajudar
 }
 
 
+
+
+
+
+
+
 /* Página Eventos */
 
 .container-area-eventos {
@@ -639,49 +540,9 @@ Página Como Ajudar
 }
 
 
-/* 
-Página Parceiros
- */
-
-.parceiros {
-    background-color: #5fbbf0;
-    padding: 48px 0;
-}
-
-.container-parceiros{
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
-}
 
 
-.container-parceiros p {
-    font-size: 20px;
-    margin-top: 24px;
-}
 
-.logos {
-    background-color: white;
-    padding: 48px 0; 
-}
-
-.container-logos {
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    
-}
-
-.container-logos img {
-   width: 200px;
-    height: 200px;
-}
 
 /* 
 Página Fale Conosco 
