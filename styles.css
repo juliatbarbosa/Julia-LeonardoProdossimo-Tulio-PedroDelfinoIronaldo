@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
+/******** Falar sobre:  zerar as propriedades **********/
 * {/* zerando as propriedades que já vem pré-definidas no css*/
-    margin: 0; /* Margin = Margem - Espaçamento fora do conteúdo. */
-    padding: 0; /*Padding = Preenchimento - Espaçamento dentro dos limites do conteúdo. */
+    margin: 0; /*Espaçamento externo*/
+    padding: 0; /*Espaçamento interno */
     box-sizing: border-box; /*não soma as bordas e margens com altura e largura de um elemento*/
 }
+
+/******** Falar sobre: body - cor de fundo e font-family **********/
 
 body { /*corpo = conteúdo*/
     background-color: #5fbbf0; /* cor de fundo */
@@ -17,26 +21,32 @@ header { /*cabeçalho*/
     background-color: white; /*cor de fundo*/
 }
 
-.container-header { /*existe para centralizar*/
+/******** Falar sobre: como deixar centralizado e com largura máxima **********/
+
+.container-header {
     width: 100%; /*largura*/
     height: 76px; /*altura*/
     max-width: 1196px; /*largura máxima*/
-    margin: 0 auto; /* margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
+    margin: 0 auto; /*centralizando o elemento*/
 }
 
-.content-header { /*existe para centralizar*/
+/******** Falar sobre: display-flex / justify-content / align-items / gap**********/
+
+.content-header {
     height: 100%; /*altura*/
-    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: space-between; /*separar os elementos ao máximo*/
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    justify-content: space-between; /*alinhar horizontalmente*/
     align-items: center; /*centralizar verticalmente*/
 }
 
-header ul { /* header ul = alteração da lista no cabeçalho*/
+header ul {
     list-style: none; /* retira os pontinhos da lista*/
-    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    display: flex; /* facilitar o posicionamento dos elementos*/
     justify-content: center; /*centralizar horizontalmente*/
-    gap: 24px; /*espaçamento entre linhas e colunas*/
+    gap: 24px; /*espaçamento entre os elementos*/
 }
+
+/******** Falar sobre: as fontes **********/
 
 header ul li a { /* header ul li a =  alteração dos links que estão nas listas do cabeçalho*/
     text-decoration: none; /*retirar o sublinhado do link*/
@@ -44,11 +54,13 @@ header ul li a { /* header ul li a =  alteração dos links que estão nas lista
     font-size: 18px; /*tamanho da fonte*/
 }
 
+/******** Falar sobre: hover e transição**********/
+
 header ul li a:hover { /*header ul li a:hover = hover utiliza-se quando passa o mouse em cima, ou seja, quando passar as alterações abaixo serão feitas*/
     color: #5fbbf0; /*cor da fonte*/
     transition: all ease 0.2s; /*tempo de transição ao colocar o mouse em cima*/
 }
-/* ********************* */
+
 
 .banner { /*banner = começo da página inicial -> */
     width: 100%; /*largura*/
@@ -59,20 +71,22 @@ header ul li a:hover { /*header ul li a:hover = hover utiliza-se quando passa o 
     width: 100%; /*largura*/
     height: 100%; /*altura*/
     max-width: 1196px; /*largura máxima*/
-    margin: 0 auto; /* margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
-    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    margin: 0 auto;  /*centralizando o elemento*/
+    display: flex; /* facilitar o posicionamento dos elementos*/
     align-items: center; /*centralizar verticalmente*/
 }
 
-.banner-img { /*imagem do banner*/
-    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: center; /*centralizar horizontalmente*/
+.banner-img {
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    justify-content: center; /*alinhar horizontalmente*/
     margin-right: 100px; /*margem do lado direito*/
 }
 
 .banner-img img { /*alteração imagem do banner*/
     width: 450px; /*largura*/
 }
+
+/******** Falar sobre: margin e padding**********/
 
 .banner-content h1 { /*conteúdo do banner - título*/
     color: white; /*cor da fonte*/
@@ -89,45 +103,47 @@ header ul li a:hover { /*header ul li a:hover = hover utiliza-se quando passa o 
 }
 
 .banner-links { /*botão do banner que vai para a página de Como Ajudar*/
-    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: end; /*posicionado no final da linha*/
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    justify-content: end; /*alinhar horizontalmente*/
     align-items: center; /*centralizado verticalmente*/
-    gap: 48px; /*espaçamento entre linhas e colunas*/
+    gap: 48px; /*espaçamento entre os elementos*/
 }
+
+/******** Falar sobre: border e border radius**********/
 
 .banner-links a { /*alteração no botão do banner que vai para a página de Como Ajudar*/
     background-color: transparent; /*cor de fundo do link/botão*/
     font-size: 19px; /*tamanho da fonte*/
-    font-weight: bold; /*expessura da fonte*/
+    font-weight: bold; /*negrito*/
     color: white; /*cor da fonte*/
     text-decoration: none; /*retirar o sublinhado do link*/
     text-transform: uppercase; /*transformar em letras maiúsculas*/
-    border: 2px solid white; /*borda com expessura de 2px, solid=inteira, cor branca*/
+    border: 2px solid white; /*borda inteira*/
     border-radius: 8px; /*arredondamento da borda*/
-    padding: 8px 24px; /*espaçamento no conteúdo, sendo 8px em cima e embaixo e 24px nas laterais*/
+    padding: 8px 24px; /*Espaçamento interno, sendo 8px em cima e embaixo e 24px nas laterais*/
 }
 
 .banner-links a:hover { /*hover altera o botão banner ao passar o mouse por cima*/
     background-color: white; /*cor de fundo do link/botão*/
     color: #5fbbf0; /*cor da fonte*/
-    border: 2px solid white; /*borda com expessura de 2px, solid=inteira, cor branca*/
+    border: 2px solid white; /*borda inteira*/
     transition: all ease 0.2s; /*tempo de transição ao colocar o mouse em cima*/
 }
-/* ********************* */
+
 
 .video { /* parte onde está o vídeo e o resumo*/
     width: 100%; /*largura*/
     background-color: white; /*cor de fundo*/
-    padding: 80px 0; /*espaçamento no conteúdo, sendo 80px em cima e embaixo e 0 nas laterais*/
+    padding: 80px 0; /*Espaçamento interno, sendo 80px em cima e embaixo e 0 nas laterais*/
 }
 
 .container-video { /*existe para centralizar*/
     width: 100%; /*largura*/
     max-width: 1196px; /*largura máxima*/
-    margin: 0 auto; /*margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
-    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: center; /*centralizado horizontalmente*/
-    gap: 48px; /*espaçamento entre as linhas e colunas*/
+    margin: 0 auto; /*centralizando o elemento*/
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    justify-content: center;/*alinhar horizontalmente*/
+    gap: 48px; /*espaçamento entre os elementos*/
 }
 
 .container-video video {/*alterações no vídeo*/
@@ -138,16 +154,16 @@ header ul li a:hover { /*header ul li a:hover = hover utiliza-se quando passa o 
     margin-top: 24px; /*margem do lado de cima*/
     font-size: 18px; /*tamanho da fonte*/
 }
-/* ********************* */
+
 
 .QuemSomos { /*parte que está tudo do Quem Somos*/
-    padding: 80px 0; /*espaçamento no conteúdo, sendo 80px em cima e embaixo e 0 nas laterais*/
+    padding: 80px 0; /*Espaçamento interno, sendo 80px em cima e embaixo e 0 nas laterais*/
 }
 
 .container-QuemSomos { /*existe para centralizar*/
     width: 100%; /*largura*/
     max-width: 1196px; /*largura máxima*/
-    margin: 0 auto; /*margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
+    margin: 0 auto; /*centralizando o elemento*/
 }
 
 .container-QuemSomos p { /*parágrafo de Quem Somos*/
@@ -157,21 +173,21 @@ header ul li a:hover { /*header ul li a:hover = hover utiliza-se quando passa o 
 }
 
 .cards { /* todos os cards de Nossos Pilares*/
-    display: flex;
-    justify-content: space-between;
-    gap: 48px;
-    padding: 32px 0;
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    justify-content: space-between; /*alinhar horizontalmente*/
+    gap: 48px;/*espaçamento entre os elementos*/
+    padding: 32px 0;  /*Espaçamento interno, sendo 32px em cima e embaixo e 0 nas laterais*/
 }
 
 .card { /*título e imagem de cada card*/
-    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+    display: flex; /* facilitar o posicionamento dos elementos*/
     align-items: center; /*centralizado verticalmente*/
     padding: 16px 48px; /*espaçamento no conteúdo, sendo 16px em cima e embaixo e 48px nas laterais*/
-    gap: 16px; /*espaçamento entre as linhas e colunas*/
-    border: 2px solid black; /*borda com expessura de 2px, solid=inteira, cor preta*/
+    gap: 16px;/*espaçamento entre os elementos*/
+    border: 2px solid black; /*borda inteira*/
     border-radius: 6px; /*arredondamento da borda*/
 }
-/* ********************* */
+
 
 .projetos { /*parte inteira do Nossos Projetos*/
     padding: 80px 0; /*espaçamento no conteúdo, sendo 80px em cima e embaixo e 0 nas laterais*/
@@ -181,7 +197,7 @@ header ul li a:hover { /*header ul li a:hover = hover utiliza-se quando passa o 
 .container-projetos { /*existe para centralizar*/
     width: 100%; /*largura*/
     max-width: 1196px; /*largura máxima*/
-    margin: 0 auto; /*margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
+    margin: 0 auto; /*centralizando o elemento*/
 }
 
 .container-projetos h2 { /*título dos projetos*/
@@ -195,12 +211,12 @@ header ul li a:hover { /*header ul li a:hover = hover utiliza-se quando passa o 
 }
 
 .projeto-card {/*possui o título, o parágrafo e as imagens*/
-    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: center; /*centralizar horizontalmente*/
-    gap: 16px; /*espaçamento entre linhas e colunas*/
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    justify-content: center; /*alinhar horizontalmente*/
+    gap: 16px; /*espaçamento entre os elementos*/
     margin-bottom: 32px; /*margem do lado debaixo*/
     padding: 12px 12px 24px 12px; /*espaçamento das laterais do conteúdo, sendo respectivamente cima, direita, baixo, esquerda*/
-    border-bottom: 1px solid #818181; /*borda de 1px na parte debaixo, solid=inteira, cor #818181 cinza*/
+    border-bottom: 1px solid #818181; /*borda inteira*/
 }
 
 .card-content p { /*parágrafo dos cards*/
@@ -214,61 +230,61 @@ Footer - Rodapé
 .container-footer { /*existe para centralizar*/
     width: 100%; /*largura*/
     max-width: 1196px; /*largura máxima*/
-    margin: 0 auto; /* margens superior e inferior são iguais a 0 e as da esquerda e direita são automáticas, centralizando o elemento*/
+    margin: 0 auto; /*centralizando o elemento*/
     padding: 24px; /*espaçamento no conteúdo, sendo 24px em todos os lados*/
 }
 
 .container-footer ul { /*alterar a direção da lista */
-    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
-    justify-content: space-between; /*separar os elementos ao máximo*/
-    align-items: center; /*centralizar horizontalmente*/
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    justify-content: space-between; /*alinhar horizontalmente*/
+    align-items: center; /*centralizar verticalmente*/
     list-style: none; /* retira os pontinhos da lista*/
-    gap: 16px;
+    gap: 16px; /*espaçamento entre os elementos*/
 }
 
 .footer-info a { /*estilização do design do link*/
-    text-decoration: none;
-    font-size: 14px;
-    color: black;
+    text-decoration: none; /*retirar o sublinhado*/
+    font-size: 14px;/*tamanho da fonte*/
+    color: black;/*cor da fonte*/
 }
 
-.footer-info a:hover { /*alteração do design no link ao passar o mouse*/
+.footer-info a:hover { 
     color: white; /*cor da fonte*/
-    transition: all ease 0.2s;
+    transition: all ease 0.2s;/*tempo de transição ao colocar o mouse em cima*/
 }
 
 .footer-info p {
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: bold; /*negrito*/
+    font-size: 14px;/*tamanho da fonte*/
 }
 
-.container-footer img { /*estilização da imagem*/
+.container-footer img { 
     width: 32px; /*largura*/
     height: 32px; /*altura*/
 }
 
-.container-footer ul li { /*centralizar o rodapé*/
-    display: flex; /*serve para criar layouts flexíveis e responsivos no CSS, permitindo organizar os elementos em uma linha ou coluna e ajustando seu tamanho, espaço e alinhamento conforme necessário.*/
+.container-footer ul li {
+    display: flex; /* facilitar o posicionamento dos elementos*/
     align-items: center; /*centralizado verticalmente*/
-    gap: 8px; /*espaçamento entre linhas e colunas*/
+    gap: 8px;/*espaçamento entre os elementos*/
 }
 
 .lista-alunos {
-    padding: 12px;
+    padding: 12px; /*Espaçamento interno, sendo 12px em todos os lados*/
 }
 
 .ano {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 16px;
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    justify-content: center; /*alinhar horizontalmente*/
+    margin-bottom: 16px;/*margem do lado debaixo*/
 }
 
 .ano p {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 18px;/*tamanho da fonte*/
+    font-weight: bold;/*negrito*/
 }
 
-
+/* *********************************************************************************************************************************************** */
 
 
 
@@ -280,122 +296,122 @@ Página Como Ajudar
 */
 
 .help {
-    background-color: #5fbbf0;
-    padding: 48px 0;
+    background-color: #5fbbf0;/* cor de fundo */
+    padding: 48px 0; /*Espaçamento interno, sendo 48px em cima e embaixo e 0 nas laterais*/
 }
 
 .container-help {
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
+    width: 100%;/*largura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto;/*centralizando o elemento*/
 }
 
 .container-help h1 {
-    margin-bottom: 24px;
+    margin-bottom: 24px;/*margem do lado debaixo*/
 }
 
 .start {
-    font-size: 20px;
-    margin-bottom: 24px;
+    font-size: 20px;/*tamanho da fonte*/
+    margin-bottom: 24px;/*margem do lado debaixo*/
 }
 
 .info-bank {
-    margin-top: 16px;
+    margin-top: 16px;/*margem do lado de cima*/
 }
 
 .info-bank p {
-    font-size: 20px;
+    font-size: 20px;/*tamanho da fonte*/
 }
 
 .form {
-    background-color: white;
-    padding: 48px 0; 
+    background-color: white;/* cor de fundo */
+    padding: 48px 0;  /*Espaçamento interno, sendo 48px em cima e embaixo e 0 nas laterais*/
 }
 
 .container-form {
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
+    width: 100%;/*largura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto;/*centralizando o elemento*/
 
-    display: flex;
-    flex-direction: column;
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    flex-direction: column; /*alinhar em coluna*/
 }
 
 .container-form h2 {
-    margin-bottom: 24px;
+    margin-bottom: 24px;/*margem do lado debaixo*/
 }
 
 .container-form p {
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 20px;/*tamanho da fonte*/
+    margin-bottom: 8px;/*margem do lado debaixo*/
 }
 
 .container-form input {
-    width: 300px;
-    padding: 6px 12px;
-    margin-bottom: 12px;
-    border-radius: 6px;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
+    width: 300px;/*largura*/
+    padding: 6px 12px;  /*Espaçamento interno, sendo 6px em cima e embaixo e 12px nas laterais*/
+    margin-bottom: 12px;/*margem do lado debaixo*/
+    border-radius: 6px; /*arredondamento da borda*/
+    font-size: 16px;/*tamanho da fonte*/
+    font-family: 'Roboto', sans-serif; /*fonte utilizada no input*/
 }
 
 .container-form a {
-    width: 72px;
-    text-decoration: none;
-    color: black;
-    border: 2px solid black;
-    border-radius: 6px;
-    padding: 4px 12px;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    font-weight: bold;
-    margin-top: 12px;
+    width: 72px;/*largura*/
+    text-decoration: none;/*retirar o sublinhado*/
+    color: black;/*cor da fonte*/
+    border: 2px solid black; /*borda inteira*/
+    border-radius: 6px; /*arredondamento da borda*/
+    padding: 4px 12px; /*Espaçamento interno, sendo 4px em cima e embaixo e 12px nas laterais*/
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    justify-content: center; /*alinhar horizontalmente*/
+    background-color: white;/* cor de fundo */
+    font-weight: bold;/*negrito*/
+    margin-top: 12px;/*margem do lado de cima*/
 }
 
 .container-form a:hover {
-    border: 2px solid #5fbbf0;
-    color: #5fbbf0;
-    transition: all ease 0.2s;
+    border: 2px solid #5fbbf0;/*borda inteira*/
+    color: #5fbbf0;/*cor da fonte*/
+    transition: all ease 0.2s;/*tempo de transição ao colocar o mouse em cima*/
 }
 
 .doacao {
-    background-color: #5fbbf0;
-    padding: 48px 0; 
+    background-color: #5fbbf0;/* cor de fundo */
+    padding: 48px 0;  /*Espaçamento interno, sendo 48px em cima e embaixo e 0 nas laterais*/
 }
 
 .container-doacao {
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
+    width: 100%;/*largura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto;/*centralizando o elemento*/
 }
 
 .container-doacao h2 {
-    margin-bottom: 24px;
+    margin-bottom: 24px;/*margem do lado debaixo*/
 }
 
 .container-doacao p {
-    font-size: 20px;
-    margin-bottom: 12px;
+    font-size: 20px;/*tamanho da fonte*/
+    margin-bottom: 12px;/*margem do lado debaixo*/
 }
 
 .end {
-    background-color: white;
-    padding: 72px 0; 
+    background-color: white;/* cor de fundo */
+    padding: 72px 0;  /*Espaçamento interno, sendo 72px em cima e embaixo e 0 nas laterais*/
 }
 
 .container-end {
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
+    width: 100%;/*largura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto;/*centralizando o elemento*/
 }
 
 .container-end p {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
+    font-size: 20px;/*tamanho da fonte*/
+    font-weight: bold;/*negrito*/
+    text-align: center; /*texto centralizado*/
 } 
-
+/* *********************************************************************************************************************************************** */
 
 
 
@@ -408,45 +424,45 @@ Página Parceiros
  */
 
  .parceiros {
-    background-color: #5fbbf0;
-    padding: 48px 0;
+    background-color: #5fbbf0;/* cor de fundo */
+    padding: 48px 0; /*Espaçamento interno, sendo 48px em cima e embaixo e 0 nas laterais*/
 }
 
 .container-parceiros{
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
+    width: 100%;/*largura*/
+    max-width: 1196px; /*largura máxima*/
+    margin: 0 auto;/*centralizando o elemento*/
 }
 
 
 .container-parceiros p {
-    font-size: 20px;
-    margin-top: 24px;
+    font-size: 20px;/*tamanho da fonte*/
+    margin-top: 24px;/*margem do lado de cima*/
 }
 
 .logos {
-    background-color: white;
-    padding: 48px 0; 
+    background-color: white;/* cor de fundo */
+    padding: 48px 0;  /*Espaçamento interno, sendo 48px em cima e embaixo e 0 nas laterais*/
 }
 
 .container-logos {
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
+    width: 100%;/*largura*/
+    max-width: 1196px;/*largura máxima*/
+    margin: 0 auto;/*centralizando o elemento*/
 
-    display: flex;
+    display: flex; /* facilitar o posicionamento dos elementos*/
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
+    justify-content: center;/*alinhar horizontalmente*/
+    align-items: center;  /*centralizar verticalmente*/
+    gap: 24px;/*espaçamento entre os elementos*/
     
 }
 
 .container-logos img {
-   width: 200px;
-    height: 200px;
+   width: 200px;/*largura*/
+    height: 200px;/*altura*/
 }
-
+/* *********************************************************************************************************************************************** */
 
 
 
@@ -458,42 +474,42 @@ Página Parceiros
  Página Notícias
 */
 .container-area-noticias {
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
-    padding: 48px 0;
+    width: 100%;/*largura*/
+    max-width: 1196px;/*largura máxima*/
+    margin: 0 auto;/*centralizando o elemento*/
+    padding: 48px 0; /*Espaçamento interno, sendo 48px em cima e embaixo e 0 nas laterais*/
     
 }
 
 .container-area-noticias h1 {
-    margin-bottom: 24px;
+    margin-bottom: 24px;/*margem do lado debaixo*/
 }
 
 .area-card-noticias {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 24px;
-    border-bottom: 1px solid black;
-    padding-bottom: 24px;
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    gap: 12px;/*espaçamento entre os elementos*/
+    margin-bottom: 24px;/*margem do lado debaixo*/
+    border-bottom: 1px solid black;/*borda inteira*/
+    padding-bottom: 24px; /*Espaçamento interno, sendo 24px embaixo*/
 }
 
 .container-area-noticias img {
-    width: 300px;
-    height: 200px;
-    min-width: 300px;
-    border: 2px solid black;
-    border-radius: 6px;
+    width: 300px;/*largura*/
+    height: 200px;/*altura*/
+    min-width: 300px;/*largura mínima*/
+    border: 2px solid black;/*borda inteira*/
+    border-radius: 6px; /*arredondamento da borda*/
 }
 
 .text-area-noticias h4 {
-    margin-bottom: 8px;
-    font-size: 24px;
+    margin-bottom: 8px;/*margem do lado debaixo*/
+    font-size: 24px;/*tamanho da fonte*/
 }
 
 .text-area-noticias p {
-    font-size: 18px;
+    font-size: 18px;/*tamanho da fonte*/
 }
-
+/* *********************************************************************************************************************************************** */
 
 
 
@@ -504,41 +520,41 @@ Página Parceiros
 /* Página Eventos */
 
 .container-area-eventos {
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
-    padding: 48px 0;
+    width: 100%;/*largura*/
+    max-width: 1196px;/*largura máxima*/
+    margin: 0 auto;/*centralizando o elemento*/
+    padding: 48px 0; /*Espaçamento interno, sendo 48px em cima e embaixo e 0 nas laterais*/
 }
 
 .container-area-eventos h1 {
-    margin-bottom: 24px;
+    margin-bottom: 24px;/*margem do lado debaixo*/
 }
 
 .area-card-eventos {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 24px;
-    border-bottom: 1px solid black;
-    padding-bottom: 24px;
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    gap: 12px;/*espaçamento entre os elementos*/
+    margin-bottom: 24px;/*margem do lado debaixo*/
+    border-bottom: 1px solid black;/*borda inteira*/
+    padding-bottom: 24px; /*Espaçamento interno, sendo 24px embaixo*/
 }
 
 .container-area-eventos img {
-    width: 300px;
-    height: 200px;
-    min-width: 300px;
-    border: 2px solid black;
-    border-radius: 6px;
+    width: 300px;/*largura*/
+    height: 200px;/*altura*/
+    min-width: 300px; /*largura mínima*/
+    border: 2px solid black;/*borda inteira*/
+    border-radius: 6px; /*arredondamento da borda*/
 }
 
 .text-area-eventos h4 {
-    margin-bottom: 8px;
-    font-size: 24px;
+    margin-bottom: 8px;/*margem do lado debaixo*/
+    font-size: 24px;/*tamanho da fonte*/
 }
 
 .text-area-eventos p {
-    font-size: 18px;
+    font-size: 18px;/*tamanho da fonte*/
 }
-
+/* ********************************************************************************************************************************************/
 
 
 
@@ -549,61 +565,61 @@ Página Fale Conosco
 */
 
 .endereco {
-    background-color: #5fbbf0;
-    padding: 48px 0;
+    background-color: #5fbbf0;/* cor de fundo */
+    padding: 48px 0; /*Espaçamento interno, sendo 48px em cima e embaixo e 0 nas laterais*/
 }
 
 .container-endereco{
-    width: 100%;
-    max-width: 1196px;
-    margin: 0 auto;
+    width: 100%;/*largura*/
+    max-width: 1196px;/*largura máxima*/
+    margin: 0 auto;/*centralizando o elemento*/
 }
 
 .container-endereco h1 {
-    margin-bottom: 48px;
+    margin-bottom: 48px;/*margem do lado debaixo*/
 }
 
 .container-endereco ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
+    list-style: none;/* retira os pontinhos da lista*/
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    justify-content: space-between; /*alinhar horizontalmente*/
 }
 
 .container-endereco ul li {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 12px;
-    flex: 1;
+    display: flex; /* facilitar o posicionamento dos elementos*/
+    align-items: center; /*centralizar verticalmente*/
+    flex-direction: column;/*alinhar em coluna*/
+    gap: 12px;/*espaçamento entre os elementos*/
+    flex: 1; /*será posicionado de acordo com o espaço*/
 }
 
 .container-endereco a {
-    text-decoration: none;
-    text-align: center;
-    color: black;
+    text-decoration: none;/*retirar o sublinhado*/
+    text-align: center;/*texto centralizado*/
+    color: black;/*cor da fonte*/
 }
 
 .endereco a:hover {
-    color: white;
-    transition: all ease 0.2s;
+    color: white;/*cor da fonte*/
+    transition: all ease 0.2s;/*tempo de transição ao colocar o mouse em cima*/
 }
 
 .social a:hover {
-    color: #5fbbf0;
-    transition: all ease 0.2s;
+    color: #5fbbf0;/*cor da fonte*/
+    transition: all ease 0.2s;/*tempo de transição ao colocar o mouse em cima*/
 }
 
 .container-endereco h4 {
-    font-size: 20px;
+    font-size: 20px;/*tamanho da fonte*/
 }
 
 .container-endereco img {
-    width: 48px;
-    height: 48px;
+    width: 48px;/*largura*/
+    height: 48px;/*altura*/
 }
 
 .social {
-    background-color: white;
-    padding: 48px 0;
+    background-color: white;/* cor de fundo */
+    padding: 48px 0; /*Espaçamento interno, sendo 48px em cima e embaixo e 0 nas laterais*/
 }
 
